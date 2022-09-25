@@ -13,6 +13,7 @@
   "author": "Anderson Daza",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^4.0.2",
     "sass": "^1.55.0"
   }
 }

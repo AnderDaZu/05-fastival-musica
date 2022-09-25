@@ -1,4 +1,6 @@
-$rojo: brown;
+// forma anterior de importar otros archivos
+@import 'base/variables';
+@import 'contenido/contenido';
 
 body {
     background-color: $rojo;

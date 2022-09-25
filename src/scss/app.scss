@@ -1,7 +1,9 @@
 // forma anterior de importar otros archivos
-@import 'base/variables';
-@import 'contenido/contenido';
+// @import 'base/variables';
+// @import 'contenido/contenido';
 
-body {
-    background-color: $rojo;
-}
+// forma nueva
+// @import 'base';
+@use 'base'; // use compila los archivos definidos en el forward
+// @import 'contenido/contenido';
+@use 'contenido';

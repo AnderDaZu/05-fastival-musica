@@ -1,0 +1,18 @@
+{
+  "name": "08-festival-musica",
+  "version": "1.0.0",
+  "description": "Proyecto con Gulpa, SASS y HTML",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Anderson Daza",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

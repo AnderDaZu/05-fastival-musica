@@ -401,6 +401,9 @@ h3 {
 
 .video {
   position: relative;
+  max-height: 70rem;
+  min-height: 50rem;
+  overflow: auto;
 }
 .video .overlay {
   position: absolute;
@@ -408,8 +411,34 @@ h3 {
   height: 100%;
   background: rgb(175, 0, 252);
   background: linear-gradient(270deg, rgba(175, 0, 252, 0.5) 0%, rgba(246, 0, 255, 0.3) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .video video {
-  width: 100%;
   display: block;
+  width: auto;
+}
+@media (min-width: 992px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.contenido-video {
+  z-index: 0;
+}
+.contenido-video h2 {
+  color: #fff;
+  font-size: 7rem;
+  margin: 0;
+}
+.contenido-video p {
+  background-color: #f53756;
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 0;
 }

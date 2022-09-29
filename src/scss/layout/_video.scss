@@ -5,7 +5,8 @@
     position: relative;
     max-height: 70rem;
     min-height: 50rem;
-    overflow: auto;
+    overflow: hidden;
+
 
     .overlay{
         position: absolute;

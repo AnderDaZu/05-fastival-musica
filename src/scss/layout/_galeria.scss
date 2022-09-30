@@ -22,3 +22,20 @@
     }
 
 }
+
+.overlay {
+    position: fixed; // fixed -> fijo
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: grid;
+    place-items: center;
+    background-color: rgb(0 0 0 / .6);
+
+    picture {
+        display: block;
+        max-width: 80rem;
+    }
+}

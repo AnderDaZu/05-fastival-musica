@@ -18,6 +18,9 @@ const cssnano = require('cssnano'); // mejoran css -> comprime
 const postcss = require('gulp-postcss'); // mejoran css 
 const sourcemaps = require('gulp-sourcemaps');
 
+// JS
+const terser = require('gulp-terser-js');
+
 // Imagenes
 const cache = require('gulp-cache');
 const imagemin = require('gulp-imagemin');
@@ -79,6 +82,9 @@ function versionWebp( done )
 function javascript( done ) {
     
     src('src/js/**/*.js')
+        .pipe( sourcemaps.init() )
+        .pipe( terser() )
+        .pipe( sourcemaps.write('.') )
         .pipe( dest('build/js') );
 
     done();

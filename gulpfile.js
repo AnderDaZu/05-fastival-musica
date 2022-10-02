@@ -16,6 +16,7 @@ const plumber = require('gulp-plumber');
 const autoprefixer = require('autoprefixer'); // mejoran css
 const cssnano = require('cssnano'); // mejoran css -> comprime
 const postcss = require('gulp-postcss'); // mejoran css 
+const sourcemaps = require('gulp-sourcemaps');
 
 // Imagenes
 const cache = require('gulp-cache');
@@ -26,9 +27,11 @@ const avif = require('gulp-avif');
 function css( done ) {
 
     src('src/scss/**/*.scss') // Identificar archivo de SASS
+        .pipe( sourcemaps.init() )
         .pipe( plumber() ) // evita que se detenga el workflow
         .pipe( sass() ) // Compilarlo
         .pipe( postcss([autoprefixer(), cssnano()]) )
+        .pipe( sourcemaps.write('.') ) // . misma ubi de arch css
         .pipe( dest('build/css') ) // Almacenarla en el disco duro
 
     done(); // Callback que avisa a gulp cuando llegamos al final
